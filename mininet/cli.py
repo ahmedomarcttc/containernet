@@ -408,7 +408,7 @@ class CLI( Cmd ):
 
         if first in self.mn:
             if not args:
-                print "*** Enter a command for node: %s <cmd>" % first
+                print ("*** Enter a command for node: %s <cmd>" % first)
                 return
             node = self.mn[ first ]
             rest = args.split( ' ' )
