@@ -38,6 +38,12 @@
    - name: install python-iptables
      pip: name=python-iptables state=latest
 
+   - name: Move directory contents of ssl_match_hostname
+     command: cp -r /usr/local/lib/python2.7/dist-packages/backports/ssl_match_hostname/ /usr/lib/python2.7/dist-packages/backports
+
+   - name: install mininet
+     shell: apt-get install -y mininet
+
    - name: built and install Containernet (using Mininet installer)
      shell: containernet/util/install.sh
      args:
